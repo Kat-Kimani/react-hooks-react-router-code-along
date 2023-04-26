@@ -1,16 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
-function Home() {
-  return (
-    <div>
-      <h1>Home!</h1>
-    </div>
-  );
-}
-
-function App() {
-  return <Home />;
-}
-
-ReactDOM.render(<App />, document.getElementById("root"));
+/* Add NavLink to import */
+import { BrowserRouter } from "react-router-dom";
+import App from "./components/App";
+/* add the NavBar component to our render method */
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById("root")
+);
